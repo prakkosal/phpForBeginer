@@ -8,7 +8,9 @@
 
 <body>
     <?php
-    echo "Hello world"
+    $hello = "Hello ";
+    $world = "World";
+    echo $hello . $world;
     ?>
 </body>
 
