@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
 
-<body>
-    <?php
-    $task = "task name";
-    $isFinished = false;
-    if ($isFinished) {
-        $message = "datara have finished " . $task;
-    } else {
-        $message = "datara have not yet finished " . $task;
-    }
-    ?>
-    <h1>
-        <?php
-        echo $message;
-        ?>
-    </h1>
-
-</body>
+    <body>
+            <?php
+            $arrayBook= [
+                " name of the book one",
+                "name of the book two", 
+                "name of the book three",
+                "name of the book four"
+                ];
+            ?>
+            <ul>
+                <?php foreach ($arrayBook as $key=> $value) : ?>
+                    <li>
+                        <?php echo  ($key+1).", ".$value?>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+    </body>
 
 </html>
