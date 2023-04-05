@@ -4,10 +4,11 @@ require("urlFunction.php");
 $config = require('config.php');
 require("Database.php");
 $db = new Database($config['database']);
-$data = $db->Query("select * from post")->fetchAll();
 
-foreach ($data as $item) {
-    echo '<br>';
-    echo ($item["title"]);
-}
-die();
+// $id = $_GET["id"];
+// $data = $db->Query("select * from post where id = " . $id)->fetchAll();
+
+$id = $_GET["id"];
+$query = "select * from post where id = :id";
+$data = $db->Query($query, [":id" => $id])->fetch();
+dd($data);
