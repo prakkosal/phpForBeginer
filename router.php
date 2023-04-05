@@ -1,5 +1,4 @@
 <?php
-
 $url = parse_url($_SERVER["REQUEST_URI"]);
 $url_last = $url["path"];
 $routes = [
