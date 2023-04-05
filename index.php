@@ -12,3 +12,4 @@ $id = $_GET["id"];
 $query = "select * from post where id = :id";
 $data = $db->Query($query, [":id" => $id])->fetch();
 dd($data);
+// node if you not bind the value they can inject sql statement
